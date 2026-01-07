@@ -13,9 +13,6 @@ def main():
     df = pd.read_csv(file_path)
     df = df.sample(n=50000, random_state=10)
 
-    print(df.head())
-    print(df.count())
-
     build_corr(
         df, 
         [

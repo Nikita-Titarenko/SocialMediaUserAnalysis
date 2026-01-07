@@ -6,7 +6,6 @@ def build_corr(df, columns, columns_title, title, output_dir):
     corr = df[columns].corr()
     corr.columns = columns_title
     corr.index = columns_title
-    print(corr)
 
     f = plt.figure(figsize=(8,6), num=title)
     sns.heatmap(corr)
