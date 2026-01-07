@@ -12,7 +12,7 @@ def build_corr(df, columns, columns_title, title, output_dir):
     sns.heatmap(corr)
     plt.tight_layout()
     plt.title(title, y=1.05)
-    f.savefig(os.path.join(output_dir, title.replace(' ', '_')), bbox_inches='tight')
+    save_figure(f, output_dir, title)
     plt.close(f)
 
 def build_lmplot(df, x, y, output_dir):
@@ -28,5 +28,14 @@ def build_lmplot(df, x, y, output_dir):
             g.figure.suptitle(title, y=1.05)
             g.figure.canvas.manager.set_window_title(title)
             plt.tight_layout()
-            g.savefig(os.path.join(output_dir, f'{title.replace(' ', '_')}.png'))
+            save_figure(g.figure, output_dir, title)
             plt.close(g.figure)
+
+def save_figure(f, output_dir, title):
+    f.savefig(
+        os.path.join(
+            output_dir, 
+            f'{title.lower().replace(' ', '_')}.png'
+        ),
+        bbox_inches='tight'
+    )
