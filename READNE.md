@@ -13,7 +13,7 @@ This project provides analysis for 1,000,000+ fully synthetic user profiles. The
 
 On the graphic, we can see that stress has a strong influence on the daily active minutes and reels/stories consumption. More stress — more active minutes and Instagram consumption.
 
-![Stress Analysis](./instagram_analysis_plots/correlation_between_stress_and_Instagram_activity.png)
+![Stress Analysis](./instagram_analysis_plots/correlation_between_stress_and_instagram_activity.png)
 
 On the scatter plot, we can see the strong relation between stress and instagram using.
 
