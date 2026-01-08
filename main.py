@@ -1,6 +1,8 @@
+import os
+
 import kagglehub
 import pandas as pd
-import os
+
 from visuals import build_corr, build_lmplot
 
 def main():
