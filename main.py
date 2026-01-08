@@ -7,8 +7,7 @@ from visuals import build_corr, build_lmplot
 
 def main():
     output_dir = "instagram_analysis_plots"
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+    os.makedirs(output_dir, exist_ok=True)
 
     path = kagglehub.dataset_download("rockyt07/social-media-user-analysis")
     file_path = os.path.join(path, "instagram_usage_lifestyle.csv")
